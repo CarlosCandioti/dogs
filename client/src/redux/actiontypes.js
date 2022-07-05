@@ -1,0 +1,5 @@
+export const GET_ALL_DOGS="GET_ALL_DOGS"
+export const GET_ALL_TEMPS="GET_ALL_TEMPS"
+export const FILTER_ALL_DOGS="FILTER_ALL_DOGS"
+export const ORDER_ALL_DOGS="ORDER_ALL_DOGS"
+export const FILTER_API_DB="FILTER_API_DB"
