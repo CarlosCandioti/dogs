@@ -51,10 +51,15 @@ return  {id:dog.id,
 })
 ///////////////////////////////////Transformador de Array a String para Temperamentos///////////////////
 filterAllDogsDB2= filterAllDogsDB.map(dog=>{
-let reducido= dog.temperament.reduce((prev,curr)=>{
+  let reducido;
+  if (dog.temperament.length>1){
+reducido= dog.temperament.reduce((prev,curr)=>{
   if (typeof(prev)==="string")return prev+', '+curr.name
   return prev.name+', '+curr.name
   })
+}else{
+  reducido=dog.temperament[0].name
+}
   let dog2={ id:dog.id,
     name:dog.name,
     image:dog.image,

@@ -1,0 +1,43 @@
+.checkbox_legion{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 11px;
+    height: auto;
+    width:80%;
+    padding: 10px;
+    border: 1px solid black;
+}
+.checkboxes{
+    width: 10px;
+}
+.etiquetas_check{
+    width: 100px;
+}
+.formulario{
+      padding: 20px;
+}
+.fields{
+    width:300px;
+    padding: 20px;
+}
+.tamaño_numeros{
+    width: 40px;
+}
+.temp_titulo{
+    width: 100%;
+    font-size: 16px;
+    margin:5px
+}
+.franja{
+    display: flex;
+}
+.enviar_div{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+.cabecera{
+    width: 100%;
+    height: 50px;
+}

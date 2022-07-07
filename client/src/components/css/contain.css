@@ -1,0 +1,9 @@
+.card_contain{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+.botonera{
+    margin: 10px;
+    text-align: center;
+}

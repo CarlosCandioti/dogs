@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
+import{NavLink}from 'react-router-dom'
 import { useDispatch, useSelector } from "react-redux";
 import { getAllDogs, getAllDogsTemperament,filterTemp, orderTheDogs, filterApiDB } from "../redux/actions";
+import './css/navbar.css'
 
 export default function NavBar(){
     
@@ -14,8 +16,9 @@ let temperamentos=useSelector(state=> state.temps)
 useEffect(()=>{dispatch(getAllDogsTemperament())},[dispatch])
 return(
     <React.Fragment>
-        <div>
-            <input name="SearchInput" onChange={(e)=>{setSearch(e.target.value)}} placeholder="Ingrese nombre de la raza de perro"/>
+        <NavLink to={"/create"}>Crear una nueva raza</NavLink>
+        <div className="search">
+            <input name="SearchInput" onChange={(e)=>{setSearch(e.target.value)}} placeholder="Ingrese nombre de la raza"/>
             <button onClick={()=>{let pag0=document.getElementById("pagina0")
             pag0.click()
             Search()

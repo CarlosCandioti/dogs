@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useSelector,useDispatch } from "react-redux";
 import {getAllDogs} from '../redux/actions'
 import Card from './Card.jsx'
+import './css/contain.css'
 
 export default function Contains(){
   const [pages,setPages]=useState(0)
@@ -88,6 +89,7 @@ if (pages===0){
 }
 return(
     <React.Fragment>
+    <div className="botonera">
 <button  id="backward" onClick={(e)=>{
   document.getElementById(`pagina${pages}`).disabled=false
    setPages(pages-1)
@@ -106,14 +108,16 @@ return(
   setPages(pages+1)
   document.getElementById(`pagina${pages+1}`).disabled=true
 }}>{">"}</button>
+</div>
 
-
-
+<div className="card_contain">
 {dogs.map(dog=>{
   contPages++
   if ((pages*10)<=contPages && ((pages*10)+10)>=contPages){
-    return (<Card key={dog.id} weight={dog.weight} name={dog.name} />
+        return (<Card key={dog.id} weight={dog.weight} image={dog.image} name={dog.name} id={dog.id} temperament={dog.temperament} />
   )}})}
+
+</div>
     </React.Fragment>
 )    
 }

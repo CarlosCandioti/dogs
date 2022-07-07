@@ -34,6 +34,8 @@ try {
 dogsRouter.post("/", async(req,res,next)=>{
 try {
   const {name,image,height,weight,life_span,temperaments}=req.body
+  console.log(name)
+  console.log(req.body)
 let DogsCreated= await PostDogs(name,image,height,weight,life_span,temperaments)
 res.send(DogsCreated)
 

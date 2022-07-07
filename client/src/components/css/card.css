@@ -1,0 +1,12 @@
+.Card{
+    width: 25%;
+    height: 200px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 12px;
+}
+.image_dog{
+    width: 100px;
+    height: 100px;
+    
+}
